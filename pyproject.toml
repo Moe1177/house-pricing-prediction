@@ -1,0 +1,52 @@
+[tool.kedro]
+package_name = "house_pricing_prediction"
+project_name = "house-pricing-prediction"
+kedro_init_version = "0.18.14"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = """
+--cov-report term-missing \
+--cov src/house_pricing_prediction -ra"""
+
+[tool.coverage.report]
+fail_under = 0
+show_missing = true
+exclude_lines = ["pragma: no cover", "raise NotImplementedError"]
+
+[tool.poetry]
+name = "house-pricing-prediction"
+version = "0.1.0"
+description = "This project processes a housing dataset and predicts house prices depending on multiple features"
+authors = ["Mohamad Addasi"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+black = ">=22.0,<23.0"
+flake8 = ">=3.7.9,<5.0"
+ipython = {version = ">=8.10,<9.0", markers = "python_version >= \"3.8\""}
+isort = ">=5.0,<6.0"
+jupyter = ">=1.0,<2.0"
+jupyterlab-server = ">=2.11.1,<2.16.0"
+jupyterlab = ">=3.0,<3.6.0"
+kedro = ">=0.18.14,<0.19.0"
+kedro-telemetry = ">=0.2.0,<0.3.0"
+nbstripout = ">=0.4,<1.0"
+pytest-cov = ">=3.0,<4.0"
+pytest-mock = ">=1.7.1,<2.0"
+pytest = ">=7.2,<8.0"
+traitlets = "<5.10.0"
+scikit-learn = "^1.5.2"
+pandas = "^2.2.2"
+kedro-viz = "^9.2.0"
+fastparquet = "^2024.5.0"
+pyarrow = "^17.0.0"
+xgboost = "^2.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

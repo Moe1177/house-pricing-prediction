@@ -1,0 +1,16 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+housing_data:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/NY-House-Dataset.csv
+
+preprocessed_housing_data:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/preprocessed_housing_data.pq
+
+regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor.pkl
+  versioned: true

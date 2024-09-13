@@ -1,0 +1,1 @@
+{"housing_data": {"rows": 4801, "columns": 17, "file_size": 1334269}, "preprocessed_housing_data": {"rows": 4801, "columns": 18033, "file_size": 15479331}, "X_train": {"rows": 4080, "columns": 5}, "X_test": {"rows": 721, "columns": 5}}
